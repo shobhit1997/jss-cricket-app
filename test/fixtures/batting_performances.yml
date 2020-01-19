@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  runs: MyString
+  balls: MyString
+  sixes: MyString
+  fours: MyString
+
+two:
+  runs: MyString
+  balls: MyString
+  sixes: MyString
+  fours: MyString
