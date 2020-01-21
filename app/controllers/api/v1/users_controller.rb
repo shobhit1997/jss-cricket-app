@@ -67,7 +67,7 @@ module Api
 			end
 
 			def user_params
-				params.permit(:name,:phone,:passout_year,:photo)
+				params.permit(:name,:phone,:passout_year,:photo, :description)
 			end
 		end
 	end
