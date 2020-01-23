@@ -4,8 +4,10 @@ module Api
 			before_action :authenticate_request, only: [:delete,:update,:create]
 
 			def index
-				matches = Match.all
-				render json: matches, status:200
+				puts Time.now
+				matchesP = Match.where("time < ?", Time.now).order('time ASC')
+				matchesUP = Match.where("time >= ?", Time.now).order('time ASC')
+				render json: {past:matchesP,upcoming:matchesUP}, status:200
 			end
 			def show
 				match = Match.find(params[:id])
